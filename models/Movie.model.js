@@ -1,26 +1,14 @@
-const mongoose = require("mongoose");
-const celebritySchema = new mongoose.Schema({
-  title: {
-    type: String,
-    // este elemento no puede repetirse, si se fuese a repetir, error!
-  },
+const { Schema, model } = require("mongoose");
 
-  genre: {
-    type: String,
-  },
-
-  plot: {
-    type: String, // en caso que la caracteristica no se pase, será el valor indicado.
-  },
-
+const movieSchema = new Schema({
+  title: String,
+  genre: String,
+  plot: String,
   cast: {
-    type: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Celebrity",
-      },
-    ], // en caso que la caracteristica no se pase, será el valor indicado.
+    type: [Schema.Types.ObjectId],
+    ref: "Celebrity",
   },
-}); // Iteration #1
-const Movie = mongoose.model("Movie", movieSchema);
+});
+
+const Movie = model("Movie", movieSchema);
 module.exports = Movie;

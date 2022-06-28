@@ -1,0 +1,27 @@
+<h2>CREAR MOVIEEEE</h2>
+
+
+<form action="/movies/create" method="POST">
+    <label for="title">TITLE:</label>
+    <input id="title" name="title" type="text"></input>
+
+    <label for="genre">GENRE:</label>
+    <input id="genre" name="genre" type="String"></input> 
+
+    <label for="plot">PLOT:</label>
+    <input id="plot" name="plot" type="String"></input> 
+
+
+
+     <label for="name-select"> Actor:
+    <select name="name">
+
+
+      {{!-- {{#each dbCelebrity}}
+        <option value="{{this._id}}"> {{this.name}} </option>
+      {{/each}} --}}
+    </select>
+  </label>
+
+    <button type="submit">Create MOVIEEEE</button>
+</form>
