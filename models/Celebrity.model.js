@@ -13,5 +13,5 @@ const celebritySchema = new mongoose.Schema({
     type:String, // en caso que la caracteristica no se pase, será el valor indicado.
   },
 }); // Iteration #1
-const Celebrity = mongoose.model("Celebrity", droneSchema);
+const Celebrity = mongoose.model("Celebrity", celebritySchema);
 module.exports = Celebrity; //  Add your code here
